@@ -1,0 +1,98 @@
+<h2>简历布局风格</h2>
+<p class="subtitle">哪种整体布局更符合你心目中的「简洁」？点击选择</p>
+
+<div class="cards">
+  <div class="card" data-choice="classic" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="padding:24px;background:#fff;font-family:system-ui;min-height:280px;border:1px solid #e5e7eb;border-radius:4px;">
+        <!-- 经典单栏 -->
+        <div style="text-align:center;margin-bottom:12px;">
+          <div style="width:48px;height:48px;border-radius:50%;background:#e5e7eb;margin:0 auto 8px;"></div>
+          <div style="font-size:16px;font-weight:700;color:#111;">张三</div>
+          <div style="font-size:11px;color:#6b7280;margin-top:4px;">电话 · 邮箱 · 城市</div>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;padding-top:8px;margin-top:8px;">
+          <div style="font-size:11px;font-weight:700;color:#111;margin-bottom:4px;">教育背景</div>
+          <div style="font-size:10px;color:#6b7280;">XX大学 · 计算机科学 · 2018-2022</div>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;padding-top:8px;margin-top:8px;">
+          <div style="font-size:11px;font-weight:700;color:#111;margin-bottom:4px;">工作经历</div>
+          <div style="font-size:10px;color:#6b7280;">XX公司 · 前端工程师 · 2022-至今</div>
+          <div style="font-size:9px;color:#9ca3af;margin-top:2px;">负责核心产品开发与优化...</div>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;padding-top:8px;margin-top:8px;">
+          <div style="font-size:11px;font-weight:700;color:#111;margin-bottom:4px;">专业技能</div>
+          <div style="font-size:10px;color:#6b7280;">JavaScript / React / TypeScript</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. 经典单栏</h3>
+      <p>居中个人信息，板块从上到下依次排列，传统稳重</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="sidebar" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="display:flex;padding:0;background:#fff;font-family:system-ui;min-height:280px;border:1px solid #e5e7eb;border-radius:4px;overflow:hidden;">
+        <!-- 左侧栏 -->
+        <div style="width:35%;background:#1e293b;padding:16px;color:#fff;">
+          <div style="width:40px;height:40px;border-radius:50%;background:#475569;margin-bottom:8px;"></div>
+          <div style="font-size:13px;font-weight:700;">张三</div>
+          <div style="font-size:9px;color:#94a3b8;margin-top:8px;">联系方式</div>
+          <div style="font-size:8px;color:#cbd5e1;margin-top:2px;">138xxxx · mail@xx.com</div>
+          <div style="font-size:9px;color:#94a3b8;margin-top:12px;">专业技能</div>
+          <div style="font-size:8px;color:#cbd5e1;margin-top:2px;">JavaScript · React · TypeScript · Node.js</div>
+          <div style="font-size:9px;color:#94a3b8;margin-top:12px;">教育背景</div>
+          <div style="font-size:8px;color:#cbd5e1;margin-top:2px;">XX大学 · 2018-2022</div>
+        </div>
+        <!-- 右侧主内容 -->
+        <div style="flex:1;padding:16px;">
+          <div style="font-size:11px;font-weight:700;color:#111;margin-bottom:6px;">工作经历</div>
+          <div style="font-size:9px;color:#6b7280;">XX公司 · 前端工程师</div>
+          <div style="font-size:8px;color:#9ca3af;margin-top:2px;">2022-至今</div>
+          <div style="font-size:8px;color:#6b7280;margin-top:4px;">负责核心产品开发与优化...</div>
+          <div style="font-size:11px;font-weight:700;color:#111;margin-bottom:6px;margin-top:12px;">项目经历</div>
+          <div style="font-size:9px;color:#6b7280;">XX平台 · 核心开发者</div>
+          <div style="font-size:8px;color:#9ca3af;margin-top:2px;">2023</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. 左侧边栏</h3>
+      <p>深色侧栏放基本信息和技能，右侧放经历，现代感强</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="minimal" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="padding:24px;background:#fff;font-family:system-ui;min-height:280px;border:1px solid #e5e7eb;border-radius:4px;">
+        <!-- 极简分栏 -->
+        <div style="font-size:18px;font-weight:300;color:#111;letter-spacing:2px;">张三</div>
+        <div style="font-size:10px;color:#6b7280;margin-top:4px;letter-spacing:1px;">138xxxx · mail@xx.com · 深圳</div>
+        <div style="height:1px;background:#111;margin:12px 0;"></div>
+        <div style="display:flex;gap:24px;">
+          <div style="flex:1;">
+            <div style="font-size:10px;font-weight:600;color:#111;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">工作经历</div>
+            <div style="font-size:10px;color:#111;font-weight:500;">XX公司</div>
+            <div style="font-size:9px;color:#6b7280;">前端工程师 · 2022-至今</div>
+            <div style="font-size:9px;color:#9ca3af;margin-top:3px;">核心产品开发...</div>
+            <div style="font-size:10px;color:#111;font-weight:500;margin-top:8px;">YY公司</div>
+            <div style="font-size:9px;color:#6b7280;">实习生 · 2021-2022</div>
+          </div>
+          <div style="flex:1;">
+            <div style="font-size:10px;font-weight:600;color:#111;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">教育背景</div>
+            <div style="font-size:10px;color:#111;">XX大学</div>
+            <div style="font-size:9px;color:#6b7280;">计算机科学 · 2018-2022</div>
+            <div style="font-size:10px;font-weight:600;color:#111;margin-top:12px;margin-bottom:6px;">技能</div>
+            <div style="font-size:9px;color:#6b7280;">JavaScript · React · TypeScript</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. 极简双栏</h3>
+      <p>细线条分隔，左右双栏内容区，留白多，设计感强</p>
+    </div>
+  </div>
+</div>
