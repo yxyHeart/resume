@@ -2,8 +2,6 @@ import { useResumeState, useResumeDispatch } from '../../context/ResumeContext';
 import { ListSection } from './ListSection';
 import styles from './BasicInfoForm.module.css';
 
-let nextId = 1;
-
 export function SkillsForm() {
   const { skills } = useResumeState();
   const dispatch = useResumeDispatch();
@@ -11,7 +9,7 @@ export function SkillsForm() {
   const handleAdd = () => {
     dispatch({
       type: 'ADD_ITEM',
-      payload: { section: 'skills', item: { id: `skill-${nextId++}`, name: '' } },
+      payload: { section: 'skills', item: { id: crypto.randomUUID(), name: '' } },
     });
   };
 

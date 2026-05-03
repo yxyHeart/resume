@@ -3,8 +3,6 @@ import { CompanyIcon } from '../CompanyIcon';
 import { ListSection } from './ListSection';
 import styles from './BasicInfoForm.module.css';
 
-let nextId = 1;
-
 export function WorkForm() {
   const { work } = useResumeState();
   const dispatch = useResumeDispatch();
@@ -12,7 +10,7 @@ export function WorkForm() {
   const handleAdd = () => {
     dispatch({
       type: 'ADD_ITEM',
-      payload: { section: 'work', item: { id: `work-${nextId++}`, company: '', position: '', startDate: '', endDate: '', description: '' } },
+      payload: { section: 'work', item: { id: crypto.randomUUID(), company: '', position: '', startDate: '', endDate: '', description: '' } },
     });
   };
 

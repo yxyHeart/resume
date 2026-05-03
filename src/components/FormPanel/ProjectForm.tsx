@@ -2,8 +2,6 @@ import { useResumeState, useResumeDispatch } from '../../context/ResumeContext';
 import { ListSection } from './ListSection';
 import styles from './BasicInfoForm.module.css';
 
-let nextId = 1;
-
 export function ProjectForm() {
   const { projects } = useResumeState();
   const dispatch = useResumeDispatch();
@@ -11,7 +9,7 @@ export function ProjectForm() {
   const handleAdd = () => {
     dispatch({
       type: 'ADD_ITEM',
-      payload: { section: 'projects', item: { id: `proj-${nextId++}`, name: '', role: '', startDate: '', endDate: '', description: '' } },
+      payload: { section: 'projects', item: { id: crypto.randomUUID(), name: '', role: '', startDate: '', endDate: '', description: '' } },
     });
   };
 

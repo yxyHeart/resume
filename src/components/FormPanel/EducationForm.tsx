@@ -2,8 +2,6 @@ import { useResumeState, useResumeDispatch } from '../../context/ResumeContext';
 import { ListSection } from './ListSection';
 import styles from './BasicInfoForm.module.css';
 
-let nextId = 1;
-
 export function EducationForm() {
   const { education } = useResumeState();
   const dispatch = useResumeDispatch();
@@ -11,7 +9,7 @@ export function EducationForm() {
   const handleAdd = () => {
     dispatch({
       type: 'ADD_ITEM',
-      payload: { section: 'education', item: { id: `edu-${nextId++}`, school: '', major: '', degree: '本科', startDate: '', endDate: '' } },
+      payload: { section: 'education', item: { id: crypto.randomUUID(), school: '', major: '', degree: '本科', startDate: '', endDate: '' } },
     });
   };
 
