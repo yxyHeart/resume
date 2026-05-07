@@ -19,11 +19,11 @@ export const initialResumeData: ResumeData = {
     { id: 'edu-1', school: '深圳大学', major: '计算机科学与技术', degree: '本科', startDate: '2018.09', endDate: '2022.06' },
   ],
   work: [
-    { id: 'work-1', company: '字节跳动', position: '前端工程师', startDate: '2022.07', endDate: '至今', description: '负责公司核心产品的前端开发与性能优化，使用 React + TypeScript 构建用户界面，推动前端工程化建设。' },
-    { id: 'work-2', company: '华为', position: '前端实习生', startDate: '2021.06', endDate: '2022.03', description: '参与终端云服务 Web 端开发，协助完成组件库迁移与单元测试覆盖。' },
+    { id: 'work-1', company: '字节跳动', position: '前端工程师', startDate: '2022.07', endDate: '至今', description: '- 负责核心产品**前端开发**与性能优化\n- 使用 `React + TypeScript` 构建用户界面\n- 推动前端工程化建设，提升开发效率' },
+    { id: 'work-2', company: '华为', position: '前端实习生', startDate: '2021.06', endDate: '2022.03', description: '- 参与终端云服务 Web 端开发\n- 协助完成**组件库迁移**与单元测试覆盖' },
   ],
   projects: [
-    { id: 'proj-1', name: '数据管理平台', role: '前端负责人', startDate: '2023.01', endDate: '2023.06', description: '独立负责平台前端架构设计与核心模块开发，实现可视化数据看板与权限管理系统。' },
+    { id: 'proj-1', name: '数据管理平台', role: '前端负责人', startDate: '2023.01', endDate: '2023.06', description: '- 独立负责平台**前端架构设计**与核心模块开发\n- 实现可视化数据看板与权限管理系统' },
   ],
   skills: [
     { id: 'skill-1', name: 'JavaScript / TypeScript' },

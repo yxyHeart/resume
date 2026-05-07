@@ -89,7 +89,45 @@
   font-size: 11px;
   color: #555;
   margin: 4px 0 0;
-  white-space: pre-line;
+  white-space: normal;
+}
+
+.entryDesc p {
+  margin: 0 0 4px;
+}
+
+.entryDesc p:last-child {
+  margin-bottom: 0;
+}
+
+.entryDesc ul, .entryDesc ol {
+  margin: 0 0 4px;
+  padding-left: 16px;
+}
+
+.entryDesc li {
+  margin: 1px 0;
+}
+
+.entryDesc strong {
+  font-weight: 600;
+}
+
+.entryDesc em {
+  font-style: italic;
+}
+
+.entryDesc code {
+  font-family: monospace;
+  font-size: 10px;
+  background: #f0f0f0;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.entryDesc a {
+  color: #2563eb;
+  text-decoration: none;
 }
 
 .skillsList {

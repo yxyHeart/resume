@@ -1,3 +1,5 @@
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { useResumeState } from '../../context/ResumeContext';
 import { CompanyIcon } from '../CompanyIcon';
 import styles from './Resume.module.css';
@@ -50,7 +52,11 @@ export function Resume() {
                 <span className={styles.entryDate}>{item.startDate} - {item.endDate}</span>
               </div>
               <div className={styles.entrySub}>{item.position}</div>
-              {item.description && <p className={styles.entryDesc}>{item.description}</p>}
+              {item.description && (
+                <div className={styles.entryDesc}>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.description}</ReactMarkdown>
+                </div>
+              )}
             </div>
           ))}
         </section>
@@ -67,7 +73,11 @@ export function Resume() {
                 <span className={styles.entryDate}>{item.startDate} - {item.endDate}</span>
               </div>
               <div className={styles.entrySub}>{item.role}</div>
-              {item.description && <p className={styles.entryDesc}>{item.description}</p>}
+              {item.description && (
+                <div className={styles.entryDesc}>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.description}</ReactMarkdown>
+                </div>
+              )}
             </div>
           ))}
         </section>
