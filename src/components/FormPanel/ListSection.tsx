@@ -1,15 +1,15 @@
 import type { ReactNode } from 'react';
 import styles from './ListSection.module.css';
 
-interface ListSectionProps {
+interface ListSectionProps<T extends { id: string }> {
   title: string;
-  items: { id: string }[];
+  items: T[];
   onAdd: () => void;
   onRemove: (id: string) => void;
-  renderItem: (item: { id: string }, index: number) => ReactNode;
+  renderItem: (item: T, index: number) => ReactNode;
 }
 
-export function ListSection({ title, items, onAdd, onRemove, renderItem }: ListSectionProps) {
+export function ListSection<T extends { id: string }>({ title, items, onAdd, onRemove, renderItem }: ListSectionProps<T>) {
   return (
     <div className={styles.section}>
       <div className={styles.header}>

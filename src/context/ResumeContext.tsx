@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer, useEffect, type Dispatch, type ReactNode } from 'react';
-import type { ResumeData, SectionKey } from '../types';
+import type { ResumeData } from '../types';
 import { resumeReducer, initialResumeData } from './reducer';
 
 type ResumeAction = Parameters<typeof resumeReducer>[1];
@@ -7,20 +7,27 @@ type ResumeAction = Parameters<typeof resumeReducer>[1];
 const STORAGE_KEY = 'resume-data';
 
 function dedupeIds(data: ResumeData): ResumeData {
-  const sections: SectionKey[] = ['education', 'work', 'projects', 'skills'];
   const seen = new Set<string>();
-  for (const sec of sections) {
-    data[sec] = data[sec].map((item) => {
-      if (seen.has(item.id)) {
-        const newId = crypto.randomUUID();
-        seen.add(newId);
-        return { ...item, id: newId };
-      }
-      seen.add(item.id);
-      return item;
-    });
+  const result = { ...data };
+
+  for (const item of result.education) {
+    if (seen.has(item.id)) { item.id = crypto.randomUUID(); }
+    seen.add(item.id);
   }
-  return data;
+  for (const item of result.work) {
+    if (seen.has(item.id)) { item.id = crypto.randomUUID(); }
+    seen.add(item.id);
+  }
+  for (const item of result.projects) {
+    if (seen.has(item.id)) { item.id = crypto.randomUUID(); }
+    seen.add(item.id);
+  }
+  for (const item of result.skills) {
+    if (seen.has(item.id)) { item.id = crypto.randomUUID(); }
+    seen.add(item.id);
+  }
+
+  return result;
 }
 
 function loadFromStorage(): ResumeData | null {

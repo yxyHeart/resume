@@ -56,5 +56,6 @@ export function resumeReducer(state: ResumeData, action: Action): ResumeData {
     case 'LOAD':
       return action.payload;
     default:
+      return state;
   }
 }

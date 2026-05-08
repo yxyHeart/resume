@@ -12,7 +12,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - run: npm ci
@@ -26,7 +26,7 @@ jobs:
           sudo mv ossutil-v1.7.18-linux-amd64/ossutil64 /usr/local/bin/ossutil
 
       - name: Configure ossutil
-        run: ossutil config -e ${{ secrets.OSS_REGION }} -i ${{ secrets.OSS_ACCESS_KEY_ID }} -k ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+        run: ossutil config -e oss-cn-beijing.aliyuncs.com -i ${{ secrets.OSS_ACCESS_KEY_ID }} -k ${{ secrets.OSS_ACCESS_KEY_SECRET }}
 
       - name: Sync to OSS
-        run: ossutil sync dist/ oss://${{ secrets.OSS_BUCKET }}/ --force
+        run: ossutil sync dist/ "oss://${{ secrets.OSS_BUCKET }}/" --force
